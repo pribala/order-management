@@ -1,0 +1,31 @@
+<ng-container *ngIf="filteredCustomers.length>0; else noData">
+  <app-filter-textbox></app-filter-textbox>
+  <table mat-table [dataSource]="filteredCustomers" class="mat-elevation-z8">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef (click)="sort('name')"> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name | capitalize}} </td>
+    </ng-container>
+
+    <!-- City Column -->
+    <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef (click)="sort('city')"> City </th>
+      <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+    </ng-container>
+
+    <!-- Order Total Column -->
+    <ng-container matColumnDef="orderTotal">
+      <th mat-header-cell *matHeaderCellDef (click)="sort('orderTotal')"> Order Total </th>
+      <td mat-cell *matCellDef="let element"> {{element.orderTotal | currency:currencyCode:'code'}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <div class="d-flex justify-content-end">Order Total: {{ orderTotals | number:'1.1-2'  | currency:currencyCode:'code'}}</div>
+  <h3>Number of customers: {{filteredCustomers.length}}</h3>
+</ng-container>
+<ng-template #noData>
+  <p>No customer data found.</p>
+</ng-template>
+
