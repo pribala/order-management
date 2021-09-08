@@ -1,0 +1,11 @@
+.general-font {
+  font-size: 1.1em;
+}
+
+.orders-table  {
+  padding: 1em;
+  & td {
+    padding: 1em;
+  }
+
+}

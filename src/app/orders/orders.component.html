@@ -1,0 +1,19 @@
+<div *ngIf="customer" class="orders-table">
+  <h1><strong>Orders for {{customer.name | capitalize}}</strong></h1>
+  <ng-container *ngIf="orders.length > 0; else noData">
+    <table class="table table-hover table-bordered general-font" *ngFor="let order of orders">
+      <tr *ngFor="let item of order.orderItems" >
+        <td>{{item.productName}}</td>
+        <td>{{item.itemCost | currency:'USD':'code'}}</td>
+      </tr>
+    </table>
+  </ng-container>
+  <ng-template #noData>
+    <p>
+      No Order History for the customer.
+    </p>
+  </ng-template>
+ <p>
+  <a routerLink="/customers">View All Customers</a>
+ </p>
+</div>

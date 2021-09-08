@@ -1,0 +1,19 @@
+[
+  {"customerId": 1,
+  "orderItems":
+  [
+    {"id": 1, "productName": "Baseball", "itemCost": 9.99},
+    {"id": 2, "productName": "Bat", "itemCost": 19.99}
+  ]
+},
+  {"customerId": 2,
+  "orderItems": [
+    {"id": 3, "productName": "Basketball", "itemCost": 7.99},
+    {"id": 4, "productName": "Shoes", "itemCost": 39.99}
+  ]},
+  {"customerId": 3,
+  "orderItems": [
+    {"id": 5, "productName": "Frisbee", "itemCost": 2.99},
+    {"id": 6, "productName": "Hat", "itemCost": 5.99}
+  ]}
+]

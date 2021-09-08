@@ -1,0 +1,6 @@
+[
+  {"id": 1, "name": "john Doe", "city": "NYC", "orderTotal": 19.9},
+  {"id": 2, "name": "james cordon", "city": "Newark", "orderTotal": 15.7},
+  {"id": 3, "name": "Billy Bob", "city": "NYC", "orderTotal": 20.02},
+  {"id": 4, "name": "Susan Joe", "city": "Brooklyn", "orderTotal": 17.15}
+]
